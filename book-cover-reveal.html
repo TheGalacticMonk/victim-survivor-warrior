@@ -3,180 +3,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Subscribe for Updates | Victim, Survivor, Warrior</title>
-  <meta name="description" content="Enter your email to receive exclusive updates and 35% off your copy of Victim, Survivor, Warrior." />
+  <title>Book Cover Reveal — 35% Off | Victim, Survivor, Warrior</title>
+  <meta name="description" content="Unlock 35% off 'Victim, Survivor, Warrior' when you join our secret subscriber list. Be the first to see the cover, get launch updates, and access exclusive content on surviving and overcoming the Targeted Individual program." />
+  <meta name="keywords" content="Victim Survivor Warrior, book discount, cover reveal, targeted individuals, self-mastery, mind control, modern slavery, book launch, exclusive offer, newsletter, Jason Lee, Earth Unhacked" />
   <link rel="canonical" href="https://victimsurvivorwarrior.com/subscribe.html" />
   <link rel="icon" type="image/png" href="/Targeted-Individuals-Bootcamp-Favicon.png" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Book Cover Reveal — 35% Off | Victim, Survivor, Warrior" />
+  <meta property="og:description" content="Get 35% off and early access to 'Victim, Survivor, Warrior' by subscribing. Be first to see the cover and receive updates." />
+  <meta property="og:image" content="https://victimsurvivorwarrior.com/images/victim-survivor-warrior-book-cover-full-sleeve.webp" />
+  <meta property="og:url" content="https://victimsurvivorwarrior.com/subscribe.html" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book Cover Reveal — 35% Off | Victim, Survivor, Warrior" />
+  <meta name="twitter:description" content="Join the secret list and get a 35% discount plus first-look at the cover for 'Victim, Survivor, Warrior.'" />
+  <meta name="twitter:image" content="https://victimsurvivorwarrior.com/images/victim-survivor-warrior-book-cover-full-sleeve.webp" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-  :root{
-    --accent:#ff3c00;
-    --bg:#0d001a;
-    --card-bg:#19102a;
-    --text:#fff;
-    --radius:1.7rem;
-  }
-  html,body{background:var(--bg);color:var(--text);font-family:'Inter','Helvetica Neue',Arial,sans-serif;margin:0;padding:0;font-size:20px;min-height:100vh;letter-spacing:.01em;overflow-x:hidden}
-  body{min-height:100vh;width:100vw;margin:0;padding:0}
-  .back-home-link{position:absolute;top:1.2rem;left:1.2rem;color:#b7b2c9;font-size:1em;font-weight:600;background:none;border:none;outline:none;text-decoration:none;border-radius:.9em;padding:.3em 1.1em .3em .6em;letter-spacing:.01em;transition:color 0.13s,background 0.12s,opacity 0.18s;z-index:99;box-shadow:none;cursor:pointer;opacity:.82}
-  .back-home-link:hover,.back-home-link:focus{color:#ff3c00;background:#23113899;text-decoration:underline;opacity:1}
-  .quiz-outer{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100vh;width:100vw;padding-top:4.5rem;box-sizing:border-box}
-  .quiz-header{text-align:center;margin-bottom:2.2rem;max-width:480px;z-index:1}
-  .quiz-header h1{color:#fff;font-size:2.18em;font-weight:800;margin:0 0 .2em 0;letter-spacing:.01em;text-shadow:0 2px 18px #0008}
-  .quiz-tagline{color:#c2bdd6;font-size:1.08em;font-weight:500;letter-spacing:.01em;margin-bottom:.4em;line-height:1.4;margin-top:.3em}
-  .quiz-container{
-    background:var(--card-bg);
-    border-radius:var(--radius);
-    box-shadow:0 8px 40px #000a;
-    max-width:480px;
-    width:100%;
-    padding:2.3rem 1.7rem 1.8rem 1.7rem;
-    margin:0 .5rem 1rem .5rem;
-    display:flex;
-    flex-direction:column;
-    gap:1.4rem;
-    z-index:1;
-    box-sizing:border-box;
-    overflow: hidden; /* Prevent overflow */
-  }
-  .book-cover-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.25rem;
-    margin-top: -0.2rem;
-  }
-  .book-cover-img {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 1.1rem;
-    box-shadow: 0 10px 40px #000b, 0 0px 0px #ff3c0011;
-    background: #190f27;
-    display: block;
-    border: 2.5px solid #24162a;
-    transition: box-shadow 0.19s, border-color 0.14s, transform 0.14s;
-    cursor: zoom-in;
-    object-fit: cover;
-  }
-  .book-cover-img:hover {
-    box-shadow: 0 16px 64px #ff3c0055, 0 0px 0px #ff3c0014;
-    border-color: var(--accent);
-    transform: scale(1.01);
-  }
-  /* MODAL STYLES */
-  .cover-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(18,9,27,0.98);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.19s;
-  }
-  .cover-modal.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-  .cover-modal-img {
-    max-width: 96vw;
-    max-height: 94vh;
-    border-radius: 1.2rem;
-    box-shadow: 0 18px 84px #000d, 0 0 0 4px var(--accent);
-    background: #160926;
-    border: 3.5px solid var(--accent);
-    display: block;
-    animation: popIn .24s cubic-bezier(.33,1.3,.33,1) both;
-  }
-  @keyframes popIn {
-    0% { opacity: 0; transform: scale(0.89);}
-    100% { opacity: 1; transform: scale(1);}
-  }
-  .cover-modal-close {
-    position: fixed;
-    top: 34px;
-    right: 44px;
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    color: #fff;
-    opacity: 0.84;
-    cursor: pointer;
-    z-index: 10001;
-    transition: opacity 0.13s, color 0.14s;
-  }
-  .cover-modal-close:hover {
-    color: var(--accent);
-    opacity: 1;
-  }
-  @media (max-width: 600px) {
+    /* Your original CSS untouched */
+    :root{
+      --accent:#ff3c00;
+      --bg:#0d001a;
+      --card-bg:#19102a;
+      --text:#fff;
+      --radius:1.7rem;
+    }
+    html,body{background:var(--bg);color:var(--text);font-family:'Inter','Helvetica Neue',Arial,sans-serif;margin:0;padding:0;font-size:20px;min-height:100vh;letter-spacing:.01em;overflow-x:hidden}
+    body{min-height:100vh;width:100vw;margin:0;padding:0}
+    .back-home-link{position:absolute;top:1.2rem;left:1.2rem;color:#b7b2c9;font-size:1em;font-weight:600;background:none;border:none;outline:none;text-decoration:none;border-radius:.9em;padding:.3em 1.1em .3em .6em;letter-spacing:.01em;transition:color 0.13s,background 0.12s,opacity 0.18s;z-index:99;box-shadow:none;cursor:pointer;opacity:.82}
+    .back-home-link:hover,.back-home-link:focus{color:#ff3c00;background:#23113899;text-decoration:underline;opacity:1}
+    .quiz-outer{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100vh;width:100vw;padding-top:4.5rem;box-sizing:border-box}
+    .quiz-header{text-align:center;margin-bottom:2.2rem;max-width:480px;z-index:1}
+    .quiz-header h1{color:#fff;font-size:2.18em;font-weight:800;margin:0 0 .2em 0;letter-spacing:.01em;text-shadow:0 2px 18px #0008}
+    .quiz-tagline{color:#c2bdd6;font-size:1.08em;font-weight:500;letter-spacing:.01em;margin-bottom:.4em;line-height:1.4;margin-top:.3em}
+    .quiz-container{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:0 8px 40px #000a;
+      max-width:480px;
+      width:100%;
+      padding:2.3rem 1.7rem 1.8rem 1.7rem;
+      margin:0 .5rem 1rem .5rem;
+      display:flex;
+      flex-direction:column;
+      gap:1.4rem;
+      z-index:1;
+      box-sizing:border-box;
+      overflow: hidden; /* Prevent overflow */
+    }
+    .book-cover-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      margin-top: -0.2rem;
+    }
     .book-cover-img {
       width: 100%;
-      max-width: 100%;
-      border-radius: 0.7rem;
+      max-width: 420px;
+      border-radius: 1.1rem;
+      box-shadow: 0 10px 40px #000b, 0 0px 0px #ff3c0011;
+      background: #190f27;
+      display: block;
+      border: 2.5px solid #24162a;
+      transition: box-shadow 0.19s, border-color 0.14s, transform 0.14s;
+      cursor: zoom-in;
+      object-fit: cover;
     }
-    .quiz-container {
-      padding: 1.2rem 0.4rem 1.2rem 0.4rem;
-      border-radius: 1rem;
+    .book-cover-img:hover {
+      box-shadow: 0 16px 64px #ff3c0055, 0 0px 0px #ff3c0014;
+      border-color: var(--accent);
+      transform: scale(1.01);
+    }
+    /* MODAL STYLES */
+    .cover-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(18,9,27,0.98);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.19s;
+    }
+    .cover-modal.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .cover-modal-img {
+      max-width: 96vw;
+      max-height: 94vh;
+      border-radius: 1.2rem;
+      box-shadow: 0 18px 84px #000d, 0 0 0 4px var(--accent);
+      background: #160926;
+      border: 3.5px solid var(--accent);
+      display: block;
+      animation: popIn .24s cubic-bezier(.33,1.3,.33,1) both;
+    }
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.89);}
+      100% { opacity: 1; transform: scale(1);}
     }
     .cover-modal-close {
-      top: 18px;
-      right: 14px;
-      font-size: 2.1rem;
+      position: fixed;
+      top: 34px;
+      right: 44px;
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      color: #fff;
+      opacity: 0.84;
+      cursor: pointer;
+      z-index: 10001;
+      transition: opacity 0.13s, color 0.14s;
     }
-  }
-  .email-step input[type="email"]{width:100%;padding:.8rem 1rem;border-radius:1.2rem;border:none;font-size:1.11em;margin-bottom:.9rem;background:#27133d;color:#fff;outline:none;box-shadow:0 1px 8px #0002;letter-spacing:.02em;box-sizing:border-box;height:3.1rem;line-height:1.3;padding-top:.8rem;padding-bottom:.8rem}
-  .email-step input[type="email"]:focus{background:#32204c}
-  .subtle-note{color:#c2bdd6;font-size:.8em;margin-bottom:1.1em;margin-top:-.7em;opacity:.73;text-align:left;max-width:420px;line-height:1.38;font-weight:400;letter-spacing:.01em}
-  .error{color:#ff3c00;font-size:1em;margin-bottom:1rem;margin-top:-.5rem;min-height:1.3em}
-  .submit-btn {
-    background: var(--accent);
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.11em;
-    border: none;
-    border-radius: 1.2rem;
-    padding: .77rem 2.3rem;
-    margin: 1rem 0 .4rem 0;
-    cursor: pointer;
-    box-shadow: 0 2px 20px #fd68003a;
-    transition:
-      background 0.16s,
-      transform 0.15s cubic-bezier(.38,.82,.52,1.1),
-      box-shadow 0.16s,
-      outline 0.12s;
-    width: 100%;
-    letter-spacing: .03em;
-    position: relative;
-    z-index: 2;
-  }
-  .submit-btn:hover, .submit-btn:focus {
-    background: #fff;
-    color: var(--accent);
-    transform: scale(1.025);
-    box-shadow:
-      0 8px 32px #ff3c0040,
-      0 0 0 6px #ff3c0022;
-    outline: none;
-  }
-  .submit-btn:focus-visible {
-    outline: 2.5px solid var(--accent);
-    outline-offset: 1.5px;
-    box-shadow:
-      0 8px 32px #ff3c004a,
-      0 0 0 7px #ff3c0027;
-  }
-  .submit-btn:active{background:#c93200;transform:scale(.97)}
-  .result-section{margin-top:.5rem;padding:1.6rem 1.2rem 2.2rem 1.2rem;background:#14011d;border-radius:1.4rem;box-shadow:0 2px 32px #0f002030;animation:fadeIn 1s;text-align:center;max-width:430px;margin-left:auto;margin-right:auto}
-  .result-title{font-size:1.2em;font-weight:800;color:var(--accent);margin-bottom:.7rem;letter-spacing:.04em}
-  .result-body{font-size:1.09em;line-height:1.7;color:#fff;text-align:left;margin:0 auto;max-width:99%}
-  .home-btn{background:#231138;color:#fff;font-size:1.13em;font-weight:600;border:none;border-radius:1.2rem;padding:.77rem 2.3rem;margin:1.3rem auto 0 auto;display:block;cursor:pointer;box-shadow:0 2px 20px #7e3ff244;transition:background 0.16s,transform 0.09s;width:90%;max-width:320px;letter-spacing:.02em}
-  .home-btn:hover,.home-btn:focus{background:#32204c;color:#ff3c00;outline:none;transform:scale(1.04)}
-  @keyframes fadeIn{0%{opacity:0;transform:translateY(25px)}100%{opacity:1;transform:translateY(0)}}
+    .cover-modal-close:hover {
+      color: var(--accent);
+      opacity: 1;
+    }
+    @media (max-width: 600px) {
+      .book-cover-img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0.7rem;
+      }
+      .quiz-container {
+        padding: 1.2rem 0.4rem 1.2rem 0.4rem;
+        border-radius: 1rem;
+      }
+      .cover-modal-close {
+        top: 18px;
+        right: 14px;
+        font-size: 2.1rem;
+      }
+    }
+    .email-step input[type="email"]{width:100%;padding:.8rem 1rem;border-radius:1.2rem;border:none;font-size:1.11em;margin-bottom:.9rem;background:#27133d;color:#fff;outline:none;box-shadow:0 1px 8px #0002;letter-spacing:.02em;box-sizing:border-box;height:3.1rem;line-height:1.3;padding-top:.8rem;padding-bottom:.8rem}
+    .email-step input[type="email"]:focus{background:#32204c}
+    .subtle-note{color:#c2bdd6;font-size:.8em;margin-bottom:1.1em;margin-top:-.7em;opacity:.73;text-align:left;max-width:420px;line-height:1.38;font-weight:400;letter-spacing:.01em}
+    .error{color:#ff3c00;font-size:1em;margin-bottom:1rem;margin-top:-.5rem;min-height:1.3em}
+    .submit-btn {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.11em;
+      border: none;
+      border-radius: 1.2rem;
+      padding: .77rem 2.3rem;
+      margin: 1rem 0 .4rem 0;
+      cursor: pointer;
+      box-shadow: 0 2px 20px #fd68003a;
+      transition:
+        background 0.16s,
+        transform 0.15s cubic-bezier(.38,.82,.52,1.1),
+        box-shadow 0.16s,
+        outline 0.12s;
+      width: 100%;
+      letter-spacing: .03em;
+      position: relative;
+      z-index: 2;
+    }
+    .submit-btn:hover, .submit-btn:focus {
+      background: #fff;
+      color: var(--accent);
+      transform: scale(1.025);
+      box-shadow:
+        0 8px 32px #ff3c0040,
+        0 0 0 6px #ff3c0022;
+      outline: none;
+    }
+    .submit-btn:focus-visible {
+      outline: 2.5px solid var(--accent);
+      outline-offset: 1.5px;
+      box-shadow:
+        0 8px 32px #ff3c004a,
+        0 0 0 7px #ff3c0027;
+    }
+    .submit-btn:active{background:#c93200;transform:scale(.97)}
+    .result-section{margin-top:.5rem;padding:1.6rem 1.2rem 2.2rem 1.2rem;background:#14011d;border-radius:1.4rem;box-shadow:0 2px 32px #0f002030;animation:fadeIn 1s;text-align:center;max-width:430px;margin-left:auto;margin-right:auto}
+    .result-title{font-size:1.2em;font-weight:800;color:var(--accent);margin-bottom:.7rem;letter-spacing:.04em}
+    .result-body{font-size:1.09em;line-height:1.7;color:#fff;text-align:left;margin:0 auto;max-width:99%}
+    .home-btn{background:#231138;color:#fff;font-size:1.13em;font-weight:600;border:none;border-radius:1.2rem;padding:.77rem 2.3rem;margin:1.3rem auto 0 auto;display:block;cursor:pointer;box-shadow:0 2px 20px #7e3ff244;transition:background 0.16s,transform 0.09s;width:90%;max-width:320px;letter-spacing:.02em}
+    .home-btn:hover,.home-btn:focus{background:#32204c;color:#ff3c00;outline:none;transform:scale(1.04)}
+    @keyframes fadeIn{0%{opacity:0;transform:translateY(25px)}100%{opacity:1;transform:translateY(0)}}
   </style>
+  <!-- FAQ Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I get the 35% discount for Victim, Survivor, Warrior?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enter your email on this page. When the book launches, you will get a 35% off code sent directly to your inbox."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will the Victim, Survivor, Warrior book be released?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Release date will be announced first to secret list subscribers. Sign up to be first to know."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a href="/" class="back-home-link">← Back to Home</a>
@@ -192,7 +230,7 @@
       <div class="book-cover-wrapper">
         <img
           src="/images/victim-survivor-warrior-book-cover-full-sleeve.webp"
-          alt="Victim, Survivor, Warrior Book Cover"
+          alt="Victim, Survivor, Warrior Book Cover Reveal, full sleeve, front and back"
           class="book-cover-img"
           id="bookCover"
           loading="lazy"
@@ -201,7 +239,7 @@
       </div>
 
       <!-- MODAL -->
-      <div class="cover-modal" id="coverModal">
+      <div class="cover-modal" id="coverModal" aria-modal="true" role="dialog">
         <button class="cover-modal-close" id="modalCloseBtn" aria-label="Close full size book cover">&times;</button>
         <img
           src="/images/victim-survivor-warrior-book-cover-full-sleeve.webp"
@@ -210,20 +248,20 @@
         />
       </div>
 
-      <form id="subscribe-form" class="email-step">
-        <input type="email" id="email-input" placeholder="you@example.com" required autocomplete="email" />
+      <form id="subscribe-form" class="email-step" autocomplete="off" aria-label="Subscribe for 35% discount">
+        <input type="email" id="email-input" placeholder="you@example.com" required autocomplete="email" aria-label="Email address to subscribe" />
         <div class="subtle-note">
           By subscribing, you'll be added to a secret list to receive a 35% discount code when the book drops. Unsubscribe anytime.
         </div>
-        <div class="error" id="email-error"></div>
-        <button type="submit" class="submit-btn">Subscribe</button>
+        <div class="error" id="email-error" aria-live="polite"></div>
+        <button type="submit" class="submit-btn" aria-label="Subscribe for 35% discount">Subscribe</button>
       </form>
       <div id="thankyou-section" class="result-section" style="display:none;">
         <div class="result-title">Thank You!</div>
         <div class="result-body">
           <p>You will receive an e-mail with your 35% discount code when the book is live!</p>
         </div>
-        <button id="home-btn" class="home-btn">Back to Home</button>
+        <button id="home-btn" class="home-btn" aria-label="Back to Home">Back to Home</button>
       </div>
     </div>
   </div>
