@@ -83,7 +83,7 @@ let subscribed=!1;try{subscribed=await addToBeehiiv(email)}catch(err){subscribed
 if(!subscribed){emailError.textContent="Could not add email to Beehiiv. Try again later.";return}
 showResult()};function validateEmail(email){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)}
 function showResult(){const counts={"Victim":0,"Survivor":0,"Warrior":0};answers.forEach(a=>{counts[a.ans]++});let max=Math.max(counts.Victim,counts.Survivor,counts.Warrior);let result=null;if(counts.Warrior===max)result="Warrior";else if(counts.Survivor===max)result="Survivor";else result="Victim";emailForm.style.display='none';resultSection.style.display='block';resultTitle.innerHTML=resultData[result].title;resultBody.innerHTML=resultData[result].body;progressBar.style.width='100%'}
-homeBtn.onclick=function(){window.location.href="/"};async function addToBeehiiv(email){const webhookURL="https://hook.us2.make.com/hp3o6u95m1j5ruklbuv8c8gjkwdorlhy";try{const res=await fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})});return res.ok}catch(err){return!1}}
+homeBtn.onclick=function(){window.location.href="/"};async function addToBeehiiv(email){const webhookURL="https://hook.us2.make.com/iyk0v6oa8159lf7nd86h9gjwm3cemd8r";try{const res=await fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})});return res.ok}catch(err){return!1}}
 renderStep();</script>
 <script>const resultData={"Victim":{title:"You're a <span class='highlight'>Victim</span>!",body:`
         <p>You’ve been bombarded mentally, physically, and spiritually, and whether you know it or not, you are being sent in loops.</p>
