@@ -47,11 +47,51 @@ h1{display:inline;position:relative;color:#fff;font-size:2.5rem;font-weight:700;
 .book-cover img{width:100%;max-width:500px;aspect-ratio:4/3;height:auto;border-radius:14px;border:2px solid var(--accent);box-shadow:0 4px 22px rgb(255 60 0 / .11);background:#130022;display:block;transition:max-width .3s;object-fit:contain}
 .social-proof{text-align:left;color:#f5c843;margin:1.5rem 0;font-size:1.05rem;font-style:italic;opacity:.94}
 .available-label{text-align:left;color:#bbb;font-size:1.05rem;letter-spacing:.02em;margin:1.5rem 0 .5rem 0;font-style:italic;opacity:.85;white-space:normal}
-.buy-links{display:flex;gap:1rem;justify-content:space-between;margin:.5rem 0;max-width:var(--container-width);width:100%;flex-wrap:nowrap}
-.buy-links img{height:36px;max-width:calc((var(--container-width)/5)-1rem);object-fit:contain;filter:brightness(0) invert(1) grayscale(1);opacity:.86;transition:opacity .14s;pointer-events:none;cursor:not-allowed}
-.buy-links img.no-filter{filter:none;opacity:1}.buy-links img:hover{opacity:1}
+/* --- BUY LINKS LOGO FIX --- */
+.buy-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem 0;
+  max-width: var(--container-width);
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.buy-links img {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 70px;
+  max-height: 36px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1) grayscale(1);
+  opacity: .86;
+  transition: opacity .14s;
+  pointer-events: none;
+  cursor: not-allowed;
+  display: block;
+  margin: 0 auto;
+  background: none;
+}
+.buy-links img.no-filter{filter:none;opacity:1}
+.buy-links img:hover{opacity:1}
 footer{text-align:center;color:#888;font-size:.96rem;margin:1.5rem 0;letter-spacing:.03em;opacity:.78}
-@media(max-width:600px){html,body{font-size:15px!important}.container{max-width:98vw!important;padding:1rem .5rem!important}.manifesto{font-size:.73rem;margin-bottom:.17rem;opacity:.66;line-height:1.5;word-break:break-word}.logo{height:54px;margin:.15rem 0 .33rem -5px}h1{white-space:normal}.tagline{font-size:1.07rem;font-weight:700;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.author-card{padding:0 1rem;overflow-x:auto}.book-cover{margin:1.2rem 0 1.1rem 0}.buy-links{overflow-x:auto;padding:0 .5rem;gap:.7rem;margin:.5rem 0}.cta-btn{width:100%;padding:1rem;margin:1rem 0}}}</style>
+@media(max-width:600px){
+  html,body{font-size:15px!important}
+  .container{max-width:98vw!important;padding:1rem .5rem!important}
+  .manifesto{font-size:.73rem;margin-bottom:.17rem;opacity:.66;line-height:1.5;word-break:break-word}
+  .logo{height:54px;margin:.15rem 0 .33rem -5px}
+  h1{white-space:normal}
+  .tagline{font-size:1.07rem;font-weight:700;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  .author-card{padding:0 1rem;overflow-x:auto}
+  .book-cover{margin:1.2rem 0 1.1rem 0}
+  .buy-links { gap: 0.4rem; max-width: 98vw; padding: 0; }
+  .buy-links img { max-width: 19vw; max-height: 28px; }
+  .cta-btn{width:100%;padding:1rem;margin:1rem 0}
+}
+</style>
 </head>
 <body>
   <main class="container">
@@ -101,13 +141,26 @@ footer{text-align:center;color:#888;font-size:.96rem;margin:1.5rem 0;letter-spac
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Barnes_%26_Noble_logo.svg" alt="Barnes & Noble" loading="lazy" />
     </div>
   </main>
- <script>const titleText="Victim, Survivor, Warrior";const titleEl=document.getElementById('title');const textNode=document.createTextNode('');titleEl.appendChild(textNode);const caretSpan=document.createElement('span');caretSpan.classList.add('caret');titleEl.appendChild(caretSpan);function typeLetterByLetter(text,index=0){if(index<=text.length){textNode.textContent=text.slice(0,index);setTimeout(()=>typeLetterByLetter(text,index+1),100)}}
- typeLetterByLetter(titleText);
- const bookCover=document.getElementById('bookCover');
- bookCover.addEventListener('mouseenter',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup-diagonal.webp'});
- bookCover.addEventListener('mouseleave',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup.webp'});
- bookCover.addEventListener('focus',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup-diagonal-alpha.webp'});
- bookCover.addEventListener('blur',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup-alpha.webp'});</script>
+ <script>
+const titleText="Victim, Survivor, Warrior";
+const titleEl=document.getElementById('title');
+const textNode=document.createTextNode('');
+titleEl.appendChild(textNode);
+const caretSpan=document.createElement('span');
+caretSpan.classList.add('caret');
+titleEl.appendChild(caretSpan);
+function typeLetterByLetter(text,index=0){
+  if(index<=text.length){
+    textNode.textContent=text.slice(0,index);
+    setTimeout(()=>typeLetterByLetter(text,index+1),100)
+  }
+}
+typeLetterByLetter(titleText);
+const bookCover=document.getElementById('bookCover');
+bookCover.addEventListener('mouseenter',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup-diagonal.webp'});
+bookCover.addEventListener('mouseleave',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup.webp'});
+bookCover.addEventListener('focus',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup-diagonal-alpha.webp'});
+bookCover.addEventListener('blur',()=>{bookCover.src='images/victim-survivor-warrior-book-cover-mockup-alpha.webp'});
+</script>
 </body>
 </html>
-
