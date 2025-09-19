@@ -148,6 +148,16 @@
       margin:2.8rem 0 1.1rem;
       letter-spacing:.03em;
     }
+   .buy-links img.galactic-logo {
+  height: 46px; /* bigger than the default 36px */
+  max-width: none; /* let height control size */
+}
+@media (max-width: 600px) {
+  .rabbit-logo {
+    height: 34px !important;
+    max-width: 20vw !important;
+  }
+}
 
     @media (max-width:600px){
       html,body{font-size:15px!important;}
@@ -218,17 +228,25 @@
     </div>
 
     <div class="available-label">
-      Coming soon in print, e-book, and audiobook
+      Available in print & e-book. Audiobook coming soon.
     </div>
 
-    <div class="buy-links">
-      <img src="images/galactic-monk-browser-logo.png" alt="Galactic Monk Store" class="no-filter" loading="lazy" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Books" loading="lazy" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" loading="lazy" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Audible_logo.svg" alt="Audible" loading="lazy" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Barnes_%26_Noble_logo.svg" alt="Barnes & Noble" loading="lazy" />
-    </div>
-
+ <div class="buy-links">
+  <a href="https://galacticmonk.com/product/victim-survivor-warrior-kindle/" target="_blank" rel="noopener noreferrer">
+    <img src="images/galactic monk store transparent logo.svg" 
+     alt="Galactic Monk Store" 
+     class="no-filter galactic-logo" 
+     loading="lazy" />
+  </a>
+  <a href="http://books.apple.com/us/book/id6747934786" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Books" loading="lazy" />
+  </a>
+  <a href="https://amzn.to/4kGAgFq" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" loading="lazy" />
+  </a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Audible_logo.svg" alt="Audible" loading="lazy" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Barnes_%26_Noble_logo.svg" alt="Barnes & Noble" loading="lazy" />
+</div>
     <footer>
       &copy; 2025 Jason Lee • Coded by Galactic Monk
     </footer>
