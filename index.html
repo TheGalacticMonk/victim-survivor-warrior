@@ -130,16 +130,59 @@
       text-align:left;color:#bbb;font-size:1.05rem;letter-spacing:.02em;
       margin:1.4rem 0 1.1rem;font-style:italic;
     }
-    .buy-links{
-      display:flex;gap:1rem;justify-content:space-between;margin-bottom:2rem;
-      max-width:var(--container-width);width:100%;
-    }
-    .buy-links img{
-      height:36px;max-width:calc((var(--container-width)/5) - 1rem);object-fit:contain;
-      filter:brightness(0) invert(1) grayscale(1);opacity:.86;pointer-events:none;
-    }
-    .buy-links img.no-filter{filter:none;opacity:1}
-    .buy-links img:hover{opacity:1}
+   .buy-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  max-width: var(--container-width);
+  width: 100%;
+  align-items: center;   /* ✅ ensures logos align vertically in the middle */
+}
+
+.buy-links img {
+  height: 36px;
+  max-width: calc((var(--container-width) / 5) - 1rem);
+  object-fit: contain;
+  filter: brightness(0) invert(1) grayscale(1);
+  opacity: .86;
+  pointer-events: none;
+}
+
+.buy-links img.no-filter {
+  filter: none;
+  opacity: 1;
+}
+
+/* Special scaling for Galactic Monk Store logo */
+.buy-links img.galactic-logo {
+  height: 48px; /* looks balanced on desktop */
+  max-width: calc((var(--container-width) / 4) - 1rem);
+  object-fit: contain;
+  margin-top: 5px;
+}
+
+/* On smaller screens, shrink proportionally but keep alignment */
+@media (max-width: 600px) {
+  .buy-links {
+    gap: .7rem;
+    margin-left: -.3rem;
+    overflow-x: auto;
+    align-items: center; /* ✅ keeps all logos centered */
+  }
+
+  .buy-links img {
+    height: 28px;
+    max-width: 16vw;
+  }
+
+  .buy-links img.galactic-logo {
+    height: 36px; /* slightly bigger but still centered */
+    max-width: 20vw;
+    margin-top: 5px;
+  }
+}
+
 
     footer{
       text-align:center;
@@ -151,12 +194,6 @@
    .buy-links img.galactic-logo {
   height: 46px; /* bigger than the default 36px */
   max-width: none; /* let height control size */
-}
-@media (max-width: 600px) {
-  .rabbit-logo {
-    height: 34px !important;
-    max-width: 20vw !important;
-  }
 }
 
     @media (max-width:600px){
